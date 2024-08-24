@@ -4,9 +4,8 @@ import { createClient } from "@supabase/supabase-js";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const supabaseUrl = "https://udcxfnwvimtwajcfzkee.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkY3hmbnd2aW10d2FqY2Z6a2VlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ0MTYxOTMsImV4cCI6MjAzOTk5MjE5M30.jcTvmeg4UhrV7oX1oRY3KhzMm4cJzLHOT4zBUG1DpiE";
+const supabaseUrl = process.env.NEXT_PUBLIC_URL!;
+const supabaseKey = process.env.NEXT_PUBLIC_API!;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 interface Country {
